@@ -10,3 +10,8 @@ http://math2.org/math/geometry/circles.htm
 */
 
 // write your solution here...
+
+var r = 10;
+var pi = 3.141592;
+var c = 2 *pi * r;
+console.log("The circumference is " + c + ".");
