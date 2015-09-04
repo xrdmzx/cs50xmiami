@@ -12,3 +12,8 @@ Ever wonder how much a "lifetime supply" of your favorite snack is? Wonder no mo
 */
 
 // write your solution here...
+var currAge = 28;
+var maxAge = 100;
+var perDay = 10;
+var restOfLife = (maxAge - currAge) * 365 * perDay ;
+console.log("You will need " + restOfLife + " to last you until the ripe old age of " + maxAge + ".");

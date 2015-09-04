@@ -10,3 +10,10 @@ Forgot how old someone is? Calculate it!
 */
 
 // write your solution here...
+var currentYear = 2015;
+var birthYear = 1987;
+
+var older = currentYear - birthYear;
+var younger = currentYear - birthYear - 1;
+
+console.log("They are either " + older + " or " + younger + ".");
