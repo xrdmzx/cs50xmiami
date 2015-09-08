@@ -11,3 +11,21 @@ and log the result to make sure it works.
 */
 
 // write your solution here...
+function helloWorld(language) {
+  if (language === "en") {
+    console.log("Hello, World.");
+  }
+  else if (language === "es") {
+    console.log("Hola, mundo");
+  }
+  else if (language === "de") {
+    console.log("Hallo, Welt.");
+  }
+  else {
+    console.log("Sorry, I don't know that language.");
+  }
+}
+
+helloWorld("en");
+helloWorld("es");
+helloWorld("de");

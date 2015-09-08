@@ -14,3 +14,17 @@ Create a function called fahrenheitToCelsius:
 */
 
 // write your solution here...
+function celsiusToFahrenheit(celsiusIn) {
+
+  var fahrenheitOut = ((celsiusIn * 9) / 5) + 32;
+  console.log (celsiusIn + "°C is " + fahrenheitOut + "°F." );
+}
+
+function fahrenheitToCelsius(fahrenheitIn) {
+
+  var celsiusOut = ((fahrenheitIn - 32) * 5) / 9;
+  console.log (fahrenheitIn + "°F is " + celsiusOut + "°C." );
+}
+
+celsiusToFahrenheit(100);
+fahrenheitToCelsius(100);

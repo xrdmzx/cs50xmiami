@@ -9,3 +9,10 @@ Create an array to hold your top choices (colors, presidents, whatever).
 */
 
 // write your solution here...
+var array = ["red", "green", "blue", "black"];
+var len = array.length;
+for (var i = 0; i < len ; i++) {
+  var number = i + 1;
+  var choice = array[i];
+  console.log("My #" + number + " choice is " + choice + ".");
+}

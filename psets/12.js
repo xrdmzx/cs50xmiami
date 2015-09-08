@@ -12,3 +12,11 @@ Write a function named calculateSupply that:
 */
 
 // write your solution here...
+function snackCalc(age, amountPerDay) {
+  var maxAge = 100.0;
+  var restOfLife = (maxAge - age) * 365.0 * (Math.round(amountPerDay)) ;
+  console.log("You will need " + restOfLife + " to last you until the ripe old age of " + maxAge + ".");
+}
+snackCalc(20, 5.8);
+snackCalc(20, 5.2);
+snackCalc(99, 1);

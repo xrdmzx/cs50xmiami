@@ -17,3 +17,19 @@ Keep track of which books you read and which books you want to read!
 */
 
 // write your solution here...
+var readingList = [
+  {title: "The Hobbit", author: "J.R.R. Tolkien", alreadyRead: true},
+  {title: "To Kill a Mockingbird", author: "Harper Lee", alreadyRead: true},
+  {title: "Enter Player One", author:"Ernest Cline", alreadyRead: false},
+  {title: "A Brief History of Time", author:"Stephen Hawking", alreadyRead: false}
+];
+var len = readingList.length
+for(var i = 0; i < len; i++) {
+  var book = readingList[i];
+  if (book.alreadyRead == true) {
+    console.log('You already read "' + book.title + '" by ' + book.author + '.');
+  }
+  else {
+    console.log('You still need to read "' + book.title + '" by ' + book.author + '.');
+  }
+}

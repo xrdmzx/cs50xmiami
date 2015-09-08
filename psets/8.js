@@ -18,4 +18,14 @@ For example:
 
 function verbing(word) {
   // write your solution here...
+  var len = word.length;
+  if (len > 2){
+    if (word.substring(len - 3) != "ing"){
+      word = word + "ing";
+    }
+  }
+  return word;
 }
+
+var string = "redact";
+console.log(verbing(string));

@@ -12,3 +12,14 @@ Write a function named calculateAge that:
 */
 
 // write your solution here...
+function calculateAge(birthYear, currentYear) {
+  var older = currentYear - birthYear;
+  var younger = currentYear - birthYear - 1;
+  console.log("You are either " + younger + " or " + older + ".");
+}
+var currentYear = new Date();
+currentYear = currentYear.getFullYear();
+
+calculateAge(1987,currentYear);
+calculateAge(1738, currentYear);
+calculateAge(0000, currentYear);

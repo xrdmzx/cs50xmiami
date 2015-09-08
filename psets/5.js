@@ -19,6 +19,6 @@ function drEvil(amount) {
   else {
         return( amount + " dollars");
   }
+}
 var result = drEvil(1000000);
 console.log(result);
-}

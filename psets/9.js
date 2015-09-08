@@ -17,4 +17,22 @@ For example:
 
 function notBad(sentence) {
   // write your solution here...
+  var notPos = sentence.indexOf("not");
+  var badPos = sentence.indexOf("bad");
+  if (notPos > -1 && badPos > notPos){
+    var subSentence = sentence.substring(0, notPos);
+    sentence = subSentence + "good!";
+    return sentence;
+  }
+  else{
+    return sentence;
+  }
 }
+
+var string1 = "This JavaScript is not that bad!";
+var string2 = "This JavaScript is bad!";
+
+console.log("1st string: " + string1 + " || 1st string after function: " + notBad(string1
+));
+console.log("2nd string: " + string2 + " || 2nd string after function: " + notBad(string2
+));

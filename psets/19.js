@@ -9,3 +9,7 @@ Write a for loop that will iterate from 0 to 10.
 */
 
 // write your solution here...
+for (var i = 0; i <= 10; i++) {
+  var product = i * 9;
+  console.log(i + " * 9 = " + product);
+}

@@ -35,3 +35,35 @@ like Wheel of Fortune without the wheel and fortune).
 */
 
 // write your solution here...
+var answer = ['F', 'O', 'X'];
+var guess = ['_', '_', '_'];
+var answerLen = answer.length;
+var letterCount = 0;
+function guessLetter(letter) {
+  letter = letter.toUpperCase();
+  for (var i = 0; i < answerLen; i++) {
+    if (letter == answer[i]) {
+      guess[i] = letter;
+      letterCount++;
+      console.log("Congrats! You found a letter " + guess);
+      break;
+    }
+    else if (letter != answer[i] && i == answerLen - 1) {
+      console.log("Sorry, " + letter + " is not in our word.");
+    }
+  }
+
+  if (letterCount == answerLen) {
+    console.log("Yayy!! You Win!!");
+  }
+}
+
+guessLetter('a');
+guessLetter('e');
+guessLetter('i');
+guessLetter('o');
+guessLetter('b');
+guessLetter('d');
+guessLetter('f');
+guessLetter('r');
+guessLetter('x');
