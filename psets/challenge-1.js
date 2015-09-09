@@ -35,35 +35,99 @@ like Wheel of Fortune without the wheel and fortune).
 */
 
 // write your solution here...
-var answer = ['F', 'O', 'X'];
-var guess = ['_', '_', '_'];
+// answer String
+var answer = ['F', 'O', 'O', 'D'];
+// guess String
+var guess = ['_', '_', '_', '_'];
+// array of wrongly guessed letters
+var wrong = [];
+// length of guess word
 var answerLen = answer.length;
+// counts correctly guessed letters
 var letterCount = 0;
+// counts wrongly guessed letters
+var strikes = 0;
+
+// Game function
 function guessLetter(letter) {
+  // negate upper and lowercase entries
   letter = letter.toUpperCase();
+  // iterate through each letter in answer
   for (var i = 0; i < answerLen; i++) {
+    // if letter matches an answer letter
     if (letter == answer[i]) {
+      // add letter to user guess array in i position
       guess[i] = letter;
+      // increment correctly guessed count
       letterCount++;
-      console.log("Congrats! You found a letter " + guess);
+    }
+    // break out of loop if letter was in array and at the last answer pos
+    if (guess.indexOf(letter) != -1 && i == answerLen - 1) {
+      console.log("correct!: " + guess);
       break;
     }
-    else if (letter != answer[i] && i == answerLen - 1) {
-      console.log("Sorry, " + letter + " is not in our word.");
+    // check that user hasn't entered this letter already
+    if (wrong.indexOf(letter) != -1) {
+      console.log("You guessed that already -_-  --> " + wrong)
+      break;
+    }
+    // if letter didnt match any letter in array
+    if (letter != answer[i] && i == answerLen - 1) {
+      // add letter to wrongly guessed letters
+      wrong.push(letter);
+      // increment wrong answer tally and alert loser, i mean player
+      strikes++;
+      console.log("wrong: " + wrong);
+      // poor hangman >.<
+      buildHangMan(strikes);
+      // if 6 wrong answers end game
+      if (strikes == 6) {
+        console.log("GAME OVER!!");
+        process.exit();
+      }
     }
   }
-
+  // Once count == answer length player wins
   if (letterCount == answerLen) {
-    console.log("Yayy!! You Win!!");
+    console.log("YAYY!! YOU WIN!!");
+        process.exit();
+  }
+  // print a blank line for cleanliness
+  console.log("\n");
+}
+
+// helper function to build hang man according to strikes
+function buildHangMan(strikes) {
+  if (strikes > 0){
+    console.log ("    0    ");
+    if (strikes == 2){
+      console.log ("    |    ");
+    }
+    if (strikes == 3){
+      console.log ("   (|    ");
+    }
+    if (strikes >= 4){
+      console.log ("   (|)   ");
+      if (strikes  == 5){
+        console.log ("   /   ");
+      }
+      if (strikes == 6){
+        console.log ("   / \\   ");
+      }
+    }
+  }
+  else{
+    console.log ("\n");
   }
 }
 
 guessLetter('a');
+guessLetter('e');
+guessLetter('e');
 guessLetter('e');
 guessLetter('i');
 guessLetter('o');
 guessLetter('b');
 guessLetter('d');
 guessLetter('f');
-guessLetter('r');
 guessLetter('x');
