@@ -46,7 +46,7 @@ function percentOf(number1, number2) {
  }
 
 function areaOfCircle(radius) {
-  var pi = 3.141592;
+  var pi = Math.PI;
   var area = (pi * (radius * radius)).toFixed(2);
   console.log("The area for a circle with radius " + radius + " is " + area + ".");
   return area;
