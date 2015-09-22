@@ -1,0 +1,43 @@
+body {
+  padding-top: 10px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+
+
+.sidebar-nav {
+  height: 1800px;
+	width: 220px;
+	background: #4D394B;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    background: #3e313c;
+}
+
+#chat {
+  background: #E6E6E6;
+  position: relative;
+}
+
+#message-form {
+  text-align: center;
+  color: #a4a4a4;
+  display: none;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+#navbar-header {
+    position: absolute;
+    left: 200px;
+      text-align: left;
+}
